@@ -1,16 +1,24 @@
 {% extends "layout.html" %}
 
-{% block title %}Page 3--Now we know everything!{% endblock %}
+{% block title %}Page 3: Animal Question 2{% endblock %}
 
 {% block content %}
-  <h1>Now I know:</h1>
+  <h1>Page 3: Animal Question 2</h1>
 
-<ul>
- <li> Your first name is: {{ session['firstName'] }} </li>
- <li> Your last name is: {{ session['lastName'] }} </li>
- <li> Your favorite color is: {{ session['favoriteColor'] }} </li>
-</ul>
+ <form action={{ url_for("renderPage4") }} method="POST">
+  <h1> Which is the biggest fish?</h1>
 
-
+  <p>Please select the correct animal:</p>
+  
+  <input type="radio" id="Jellyfish" name="Question 2" value="Jellyfish" checked>
+  <label for="Jellyfish">Jellyfish</label><br>
+  <input type="radio" id="Brown_Tang" name="Question 2" value="Brown Tang">
+  <label for="Brown Tang">Brown Tang</label><br>  
+  <input type="radio" id="Tuna" name="Question 2" value="Tuna">
+  <label for="Tuna">Tuna</label><br>
+  <input type="radio" id="Whale_shark" name="Question 2" value="Whale Shark">
+  <label for="Whale Shark">Whale Shark</label><br><br>
+  <input type="submit" value="Submit">
+</form>
 
 {% endblock %}

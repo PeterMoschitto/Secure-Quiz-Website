@@ -1,16 +1,24 @@
 {% extends "layout.html" %}
 
-{% block title %}Page 2: Ask for your favorite color{% endblock %}
+{% block title %}Page 2: Animal Question 1{% endblock %}
 
 {% block content %}
-  <h1>Page 2: Ask for favorite color</h1>
+  <h1>Page 2: Animal Question 1</h1>
 
  <form action={{ url_for("renderPage3") }} method="POST">
-  Favorite Color:<br>
-  <input type="text" name="favoriteColor">
+  <h1> Name the strongest insect which can lift and support more than 800 times its own weight?</h1>
+
+  <p>Please select the correct animal:</p>
+  
+  <input type="radio" id="Rhinoceros_beetle" name="Question 1" value="Rhinoceros beetle" checked>
+  <label for="Rhinoceros_beetle">Rhinoceros beetle</label><br>
+  <input type="radio" id="Grasshopper" name="Question 1" value="Grasshopper">
+  <label for="Grasshopper">Grasshopper</label><br>  
+  <input type="radio" id="Ladybug" name="Question 1" value="Ladybug">
+  <label for="Ladybug">Ladybug</label><br>
+  <input type="radio" id="Mosquito" name="Question 1" value="Mosquito">
+  <label for="Mosquito">Mosquito</label><br><br>
   <input type="submit" value="Submit">
- </form> 
-
-
+</form>
 
 {% endblock %}
