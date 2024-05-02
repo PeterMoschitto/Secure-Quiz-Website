@@ -84,8 +84,19 @@ def renderPage6():
 	q3 = correct3()
 	session["favAnimal"]=request.form['favAnimal']
 	return render_template('page6.html', score = scores, correct1 = q1, correct2 = q2, correct3 = q3)
-    
-    
+	
+	
+@app.route('/page7',methods=['GET','POST'])
+def renderPage7():
+	return render_template('page7.html')
+	
+@app.route('/page8',methods=['GET','POST'])
+def renderPage8():
+	q4 = correct4()
+	session["ExtraCredit"]=request.form['ExtraCredit']
+	return render_template('page8.html', correct4 = q4)
+	
+
 def score():
 	score = 0
 	if session['Question 1'] == "Rhinoceros beetle":
@@ -120,6 +131,14 @@ def correct3():
 		correct3 = "Incorrect"
 	return correct3
 	
+	
+def correct4():
+	correct4 = None
+	if session['ExtraCredit'] == "Mr. Stewart":
+		correct4 = "Correct"
+	else: 
+		correct4 = "Incorrect"
+	return correct4
 
     
 if __name__=="__main__":
