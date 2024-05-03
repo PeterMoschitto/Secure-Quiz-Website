@@ -88,24 +88,39 @@ def renderPage6():
 	
 @app.route('/page7',methods=['GET','POST'])
 def renderPage7():
-	return render_template('page7.html')
+	return render_template('page7.html') 
 	
 @app.route('/page8',methods=['GET','POST'])
 def renderPage8():
-	q4 = correct4()
-	session["ExtraCredit"]=request.form['ExtraCredit']
-	return render_template('page8.html', correct4 = q4)
+    if 'ExtraCredit' in session:
+        error = "You have been caught trying to change your answer!"
+    else:
+        session["ExtraCredit"]=request.form['ExtraCredit']
+        scores = score()
+        q1 = correct1()
+        q2 = correct2()
+        q3 = correct3()
+        q4 = correct4()
+        if session['ExtraCredit'] == "Mr. Stewart":
+            scores+=1
+        return render_template('page8.html', score = scores, correct1 = q1, correct2 = q2, correct3 = q3, correct4 = q4)
+    session.clear() #clears variable values and creates a new session
+    return render_template('home.html', error=error) # url_for('renderMain') could be replaced with '/' 
+   
+   
 	
 
 def score():
-	score = 0
-	if session['Question 1'] == "Rhinoceros beetle":
-		score += 1
-	if session['Question 2'] == "Whale Shark":
-		score += 1
-	if session['Question 3'] == "Capybara":
-		score += 1
-	return score
+    score = 0
+    if session['Question 1'] == "Rhinoceros beetle":
+        score += 1
+        
+    if session['Question 2'] == "Whale Shark":
+        score += 1
+        
+    if session['Question 3'] == "Capybara":
+        score += 1
+    return score
 	
 def correct1():
 	correct1 = None

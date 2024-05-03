@@ -3,10 +3,13 @@
 {% block title %}Page 2: Animal Question 1{% endblock %}
 
 {% block content %}
+ <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:30%">Question 1</div>
+  </div>
   <h1>Page 2: Animal Question 1</h1>
 
  <form action={{ url_for("renderPage3") }} method="POST">
-  <h1> Name the strongest insect which can lift and support more than 800 times its own weight?</h1>
+  <h2> Name the strongest insect which can lift and support more than 800 times its own weight?</h2>
 
   <p>Please select the correct animal:</p>
   

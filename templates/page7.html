@@ -3,20 +3,30 @@
 {% block title %}Page 7--Now we know everything!{% endblock %}
 
 {% block content %}
-<!--   <h1>Now I know:</h1> -->
-	
-<p>Who is the king of the jungle?</p>
+
+<div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:100%">Extra Credit</div>
+  </div>
+
+<h1>Extra Credit</h1>
+
+ <form action={{ url_for("renderPage8") }} method="POST">
+  <h2> Who is the king of the jungle?</h2>
+
+  <p>Please select the correct answer:</p>
   
-<form action={{ url_for("renderPage8") }} method="POST">
   <input type="radio" id="Tiger" name="ExtraCredit" value="Tiger" checked>
   <label for="Tiger">Tiger</label><br>
+  
   <input type="radio" id="Mr_Stewart" name="ExtraCredit" value="Mr. Stewart">
-  <label for="Mr_Stewart">Mr. Stewart</label><br>  
+  <label for="Mr. Stewart">Mr. Stewart</label><br>  
+  
   <input type="radio" id="Cheetah" name="ExtraCredit" value="Cheetah">
   <label for="Cheetah">Cheetah</label><br>
+  
   <input type="radio" id="Charlie" name="ExtraCredit" value="Charlie">
   <label for="Charlie">Charlie</label><br><br>
   <input type="submit" value="Submit">
-  </form> 
+</form>
 
 {% endblock %}

@@ -3,6 +3,9 @@
 {% block title %}Page 5: Favorite animal{% endblock %}
 
 {% block content %}
+<div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:80%">Favorite Animal</div>
+  </div>
   <h1>Page 5: What is your favorite animal?</h1>
 
  <form action={{ url_for("renderPage6") }} method="POST">

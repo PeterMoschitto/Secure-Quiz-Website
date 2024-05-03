@@ -3,19 +3,22 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
+   <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:0%">0%</div>
+  </div>
+
+
   <h1>Home</h1>
 
-<p>This website will ask you a series of questions, and then
-tell you what your answers were.  This is kind of silly, but it
-illustrates the idea of a "session" in a webapp&mdash;the thing that
-allows you to "remember" a user's answers from one page to another.</p>
+<p>This website will ask you a series of questions about animals, and then
+tell you what some of your answers were. It will also tell you whether some of your answers were correct or incorrect.</p>
 
-  <ul>
-    <li><a href="/page1">Get started</a></li
-  </ul>
+  <form action={{ url_for("renderPage1") }} method="GET">
+  <input type="submit" value="Get Started">
+ </form> 
   
 
-    <p> {{ error }} </p>
+    <p id="error"> {{ error }} </p>
 
   
 {% endblock %}

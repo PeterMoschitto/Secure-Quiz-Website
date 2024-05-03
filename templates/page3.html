@@ -3,10 +3,13 @@
 {% block title %}Page 3: Animal Question 2{% endblock %}
 
 {% block content %}
+<div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:45%">Question 2</div>
+  </div>
   <h1>Page 3: Animal Question 2</h1>
 
  <form action={{ url_for("renderPage4") }} method="POST">
-  <h1> Which is the biggest fish?</h1>
+  <h2> Which is the biggest fish?</h2>
 
   <p>Please select the correct animal:</p>
   

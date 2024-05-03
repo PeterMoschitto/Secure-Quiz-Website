@@ -3,19 +3,19 @@
 {% block title %}Page 8--Now we know everything!{% endblock %}
 
 {% block content %}
+
+<div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:100%">Final Results</div>
+  </div>
+
+<h1>Final Results:</h1>
 	
 <ul>
- <li> Your first name is: {{ session['firstName'] }} </li>
- <li> Your last name is: {{ session['lastName'] }} </li>
- <li> Your birthday is: {{ session['birthday'] }} </li>
- <li> Your favorite animal is: {{ session['favAnimal'] }} </li>
- <li> You got a final score of {{ score }} out of 3. 
- <li> You answered question 1 {{ correct1 }}. </li> 
- <li> you answered question 2 {{ correct2 }}. </li>
- <li> You answered question 3 {{ correct3 }}. </li>
  <li> You answered the extra credit question {{ correct4 }}. </li>
-
+ <li> Your new score is {{ score }} out of 4. </li>
 </ul>
+
+<p>You have finished the quiz. Click the button to Start over!</p>
 
 
 
