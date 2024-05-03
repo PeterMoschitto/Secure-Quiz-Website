@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}Page 5: Favorite animal{% endblock %}
+
+{% block content %}
+  <h1>Page 5: What is your favorite animal?</h1>
+
+ <form action={{ url_for("renderPage6") }} method="POST">
+  What is your favorite animal?<br>
+  <input type="text" name="favAnimal">
+  <br>
+  <input type="submit" value="Submit">
+ </form> 
+
+
+{% endblock %}

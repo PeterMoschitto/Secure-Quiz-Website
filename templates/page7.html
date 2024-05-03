@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}Page 7--Now we know everything!{% endblock %}
+
+{% block content %}
+<!--   <h1>Now I know:</h1> -->
+	
+<p>Who is the king of the jungle?</p>
+  
+<form action={{ url_for("renderPage8") }} method="POST">
+  <input type="radio" id="Tiger" name="ExtraCredit" value="Tiger" checked>
+  <label for="Tiger">Tiger</label><br>
+  <input type="radio" id="Mr_Stewart" name="ExtraCredit" value="Mr. Stewart">
+  <label for="Mr_Stewart">Mr. Stewart</label><br>  
+  <input type="radio" id="Cheetah" name="ExtraCredit" value="Cheetah">
+  <label for="Cheetah">Cheetah</label><br>
+  <input type="radio" id="Charlie" name="ExtraCredit" value="Charlie">
+  <label for="Charlie">Charlie</label><br><br>
+  <input type="submit" value="Submit">
+  </form> 
+
+{% endblock %}

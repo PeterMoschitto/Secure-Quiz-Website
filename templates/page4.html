@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}Page 4: Animal Question 3{% endblock %}
+
+{% block content %}
+  <h1>Page 4: Animal Question 3</h1>
+
+ <form action={{ url_for("renderPage5") }} method="POST">
+  <h1> Name the largest rodent?</h1>
+
+  <p>Please select the correct animal:</p>
+  
+  <input type="radio" id="House_Mouse" name="Question 3" value="House Mouse" checked>
+  <label for="House Mouse">House Mouse</label><br>
+  
+  <input type="radio" id="Capybara" name="Question 3" value="Capybara">
+  <label for="Capybara">Capybara</label><br>  
+  
+  <input type="radio" id="Gundi" name="Question 3" value="Gundi">
+  <label for="Gundi">Gundi</label><br>
+  
+  <input type="radio" id="Tuco-Tuco" name="Question 3" value="Tuco-Tuco">
+  <label for="Tuco-Tuco">Tuco-Tuco</label><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+{% endblock %}

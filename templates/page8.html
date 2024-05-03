@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}Page 8--Now we know everything!{% endblock %}
+
+{% block content %}
+	
+<ul>
+ <li> Your first name is: {{ session['firstName'] }} </li>
+ <li> Your last name is: {{ session['lastName'] }} </li>
+ <li> Your birthday is: {{ session['birthday'] }} </li>
+ <li> Your favorite animal is: {{ session['favAnimal'] }} </li>
+ <li> You got a final score of {{ score }} out of 3. 
+ <li> You answered question 1 {{ correct1 }}. </li> 
+ <li> you answered question 2 {{ correct2 }}. </li>
+ <li> You answered question 3 {{ correct3 }}. </li>
+ <li> You answered the extra credit question {{ correct4 }}. </li>
+
+</ul>
+
+
+
+ 
+
+
+{% endblock %}
